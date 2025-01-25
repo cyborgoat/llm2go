@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+  presets: [
+    require('./example-preset.js'),
+  ],
+  // This will replace the configuration in the preset
+  corePlugins: ['float', 'padding', 'margin']
 }
